@@ -35,6 +35,8 @@ func main() {
 		return c.Render("login", fiber.Map{})
 	})
 
+	// api
 	app.Post("/api/login", controllers.Login())
+	
 	log.Fatal(app.Listen(":3000"))
 }
